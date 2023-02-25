@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  api_scaffold:
+    build:
+      context: .
+      target: base
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./.env
+    networks:
+      - main
+    ports:
+      - ${API_PORT}:${API_PORT}
+
+networks:
+  main:
