@@ -12,4 +12,4 @@ RUN pipenv install --system
 
 EXPOSE $API_PORT
 
-CMD uvicorn main:app --host 0.0.0.0 --port $API_PORT
+CMD cd src && uvicorn main:app --host 0.0.0.0 --port $API_PORT
